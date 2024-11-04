@@ -12,7 +12,7 @@
 //
 
 
-const sum = function(lsh:number, rsh:number):number{
+const sum = (lsh:number, rsh:number):number=>{
     return lsh + rsh;
 }
 const add=sum(3,8);

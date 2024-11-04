@@ -11,3 +11,8 @@ import { strict as assert } from "assert";
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 //
+
+const numbers: number[]= [1,2,3];
+const letters: string[]=["h", "e","w"]
+
+const multiDimension: string[][]= [["34H", "Address", "zipcode"],["02F", "StreetA", "37870"]]

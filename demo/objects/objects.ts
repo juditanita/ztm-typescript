@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { strict as assert } from "assert";
+import { GiThunderBlade } from "react-icons/gi";
 
 // Objects are a fundamental data type used to represent a collection of
 // properties with their respective values. They are defined using either an
@@ -37,10 +38,16 @@ coord.y = 7;
 //assert.deepEqual(coord, {x:4, y:8})
 //assert.deepEqual(coord, {x:8, y:7})
 
+type PersonName = String;
 
-function calculateDistance(coord: Coordinate){
-    const distance =Math.sqrt(coord.x **2 + coord.y**2);
-    console.log(distance);
+type Location ={
+    coord:Coordinate;
+    name: PersonName
 }
 
-calculateDistance({x:3, y:4});
+let home ={
+    coord: {x:0, y:0},
+    name:"Gina"
+}
+
+console.log(home.coord.x, home.coord.y, home.name)

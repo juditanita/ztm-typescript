@@ -10,3 +10,10 @@
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 //
+
+
+const sum = function(lsh:number, rsh:number):number{
+    return lsh + rsh;
+}
+const add=sum(3,8);
+console.log(add);

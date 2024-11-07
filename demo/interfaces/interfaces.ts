@@ -66,3 +66,36 @@ const circle = new Circle();
     console.log("The  area is:" ,item.area());
    
  })
+
+ interface CustomerInfo{
+    name:string;
+ }
+
+ class Customer implements CustomerInfo{
+
+
+    name:string;
+    constructor(name:string){
+        this.name = name;
+    }
+ }
+
+
+ interface Address{
+    street:string,
+    city:string
+ }
+
+
+ function printAddress(address:Address){
+    console.log(`The address is ${address.city} ${address.street}`)
+
+ }
+
+
+ const addr = {
+    street:"Gala Antonio",
+    city:"New York"
+ }
+
+ printAddress(addr);

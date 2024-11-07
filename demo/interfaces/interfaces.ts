@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { strict as assert } from "assert";
+import { forEach } from "core-js/core/array";
 
 // Interfaces provide a way to define the shape of objects or classes. They
 // define the contracts that objects must follow, specifying the properties and
@@ -12,3 +13,56 @@ import { strict as assert } from "assert";
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
 //
+
+
+interface Area{
+    // signiture method
+    area():number;
+}
+
+interface Peremeter{
+    perimeter():number
+}
+
+class Rectangle implements Area,Peremeter{
+
+    length:number = 7;
+    width:number = 5;
+
+    area():number{
+        return this.width * this.length;
+    }
+
+    perimeter(): number {
+        return (this.width * this.length)*2;
+    }
+}
+
+
+type AreaPeremeter = Area & Peremeter;
+
+const rect = new Rectangle();
+
+class Circle implements AreaPeremeter{
+    radius:number = 5;
+
+    area():number{
+        return Math.PI * this.radius **2
+    }
+
+    perimeter(): number {
+        return 2* this.radius *Math.PI;
+    }
+}
+
+const circle = new Circle();
+
+
+
+ // put the rect, and circle together;
+ const objectsWithArea: Area[] = [rect, circle]
+
+ objectsWithArea.forEach(item=>{
+    console.log("The  area is:" ,item.area());
+   
+ })

@@ -9,3 +9,25 @@
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html
 //
+
+
+const abc=["a", "b", "c"];
+
+for( const letter of abc){
+    console.log(letter)
+}
+
+// iterate through object
+
+const nums ={
+    one:1,
+    two:2,
+    three:3
+}
+
+let key: keyof typeof nums;
+
+for (key in nums){
+    console.log(`The key is: ${key} and the value is ${nums[key]}.`);
+    
+}
